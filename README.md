@@ -22,8 +22,8 @@
     npm run dev
 ```
 
-5. hdu
-...
-npm run dev
-...
+
+### Setup instructions for tailwind
+
+[Tail wind official instruction doc](https://tailwindcss.com/docs/installation)
 
