@@ -6,6 +6,6 @@ export default {
   },
 
   // eslint-disable-next-line no-undef
-  plugins: [require("daisyui"), require("@tailwindcss/line-clamp")]
+  plugins: [require("daisyui"),require("@tailwindcss/line-clamp")]
 }
 
