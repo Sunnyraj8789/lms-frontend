@@ -1,12 +1,13 @@
 import {AiFillCloseCircle} from 'react-icons/ai';
 import { FiMenu } from "react-icons/fi";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
 import Footer from '../Components/Footer';
+import { logout } from '../Redux/Slices/AuthSlice';
 function HomeLayout({children}){
 
-    // const dispatch=useDispatch();
+    const dispatch=useDispatch();
     const navigate=useNavigate();
 
     //for cheaking if user is logged in 
@@ -31,11 +32,11 @@ function HomeLayout({children}){
 
     }
 
-    function handleLogout(e){
+   async function handleLogout(e){
         e.preventDefault();
 
-        // const res=await dispatch(logout());
-        // if(res?.payload?.success)
+        const res=await dispatch(logout());
+        if(res?.payload?.success)
         navigate("/");
     }
 
