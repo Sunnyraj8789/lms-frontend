@@ -14,12 +14,9 @@ module.exports = {
   rules: {
      'simple-import-sort/imports':'error',
      "react/prop-types":"off",
-     'react/jsx-no-target-blank': 'off',
     'react-refresh/only-export-components': [
       'warn',
-      { allowConstantExport: true },
-       eslint-disable-next-line ,no-unused-vars,
-
+      { allowConstantExport:true },
     ],
   },
 }

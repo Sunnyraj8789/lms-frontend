@@ -20,5 +20,4 @@ function CarouselSlide({image,title,description,slideNumber,totalSlides})
         </div>
     );
 }
-
 export default CarouselSlide;
