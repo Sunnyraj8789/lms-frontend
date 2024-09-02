@@ -57,11 +57,11 @@ function Contact(){
     return (
 
         <HomeLayout>
-            <div className="flex items-center justify-center h-[100vh]">
+            <div className="flex items-center justify-center min-h-[90vh]">
             <form 
                 noValidate
                 onSubmit={onFormSubmit}
-                className="flex flex-col items-center justify-center gap-2 p-5 rounded-md text-white shadow-[0_0_10px_black] w-[22rem]">
+                className="flex flex-col items-center justify-center gap-2 p-5 rounded-md text-white shadow-[0_0_10px_gray] w-[22rem]">
                 
                 <h1 className="text-3xl font-semibold">
                     Contact Form

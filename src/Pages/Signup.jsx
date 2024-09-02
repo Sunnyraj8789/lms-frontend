@@ -107,7 +107,7 @@ function Signup()
     return (
         <HomeLayout>
             <div className='flex overflow-x-auto items-center justify-center h-[90vh]'>
-                <form noValidate onSubmit={createNewAccount} className='flex flex-col justify-center gap-3 rounded-lg p-4 text-white w-96 shadow-[0_0_10px_black]'>
+                <form noValidate onSubmit={createNewAccount} className='flex flex-col justify-center gap-3 rounded-lg p-4 text-white w-96 shadow-[0_0_10px_gray]'>
                     <h1 className="text-center text-2xl font-bold ">Registration Page</h1>
                     <label htmlFor="image_uploads" className="cursor-pointer">
                         {previewImage?(

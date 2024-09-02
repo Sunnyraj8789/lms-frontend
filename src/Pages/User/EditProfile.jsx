@@ -69,7 +69,7 @@ function EditProfile(){
             <div className="min-h-[90vh] flex items-center justify-center">
                 <form 
                     onSubmit={onFormSubmit}
-                    className="flex flex-col justify-center gap-5 rounded-lg p-4 text-white w-80 min-h-[25rem] shadow-[0_0_10px_black]"
+                    className="flex flex-col justify-center gap-5 rounded-lg p-4 text-white w-80 min-h-[25rem] shadow-[0_0_10px_gray]"
                 >
                     <h1 className="text-center text-2xl font-semibold">Edit Profile</h1>
                     <label className="cursor-pointer" htmlFor="image_uploads">
