@@ -3,6 +3,7 @@ import {Route, Routes } from 'react-router-dom';
 import RequireAuth from './Components/Auth/RequireAuth';
 import AboutUs from './Pages/AboutUs';
 import Contact from './Pages/Contact';
+import CourseDescription from './Pages/Course/CourseDescription';
 import CourseList from './Pages/Course/CourseList';
 import CreateCourse from './Pages/CreateCourse';
 import Denied from './Pages/Denied';
@@ -25,6 +26,9 @@ function App() {
           <Route path='/courses' element={<CourseList/>}></Route>
           <Route path='/contact' element={<Contact/>}></Route>
           <Route path='/denied' element={<Denied/>}></Route>
+
+          <Route path='/course/description' element={<CourseDescription/>}/>
+          
 
           
           <Route path='/signup' element={<Signup/>}></Route>

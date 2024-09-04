@@ -6,7 +6,6 @@ import axiosInstance from "../../Helpers/axiosInstance"
 const initialState={
     courseData:[]
 }
-
 export const getAllCourses=createAsyncThunk("/course/get",async()=>{
     try {
         const response=axiosInstance.get("/courses");
