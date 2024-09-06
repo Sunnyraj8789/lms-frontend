@@ -19,25 +19,26 @@ const Footer = () => {
         <section className="flex items-center justify-center gap-5 text-2xl text-white">
           <a
             className="hover:text-yellow-500 transition-all ease-in-out duration-300"
-            href="#"
+            href="https://www.facebook.com/sunnyraj.gupta.56863/"
           >
             <BsFacebook />
           </a>
           <a
             className="hover:text-yellow-500 transition-all ease-in-out duration-300"
-            href="#"
+            href="https://www.instagram.com/im_sunny_raj_gupta/"
+            
           >
             <BsInstagram />
           </a>
           <a
             className="hover:text-yellow-500 transition-all ease-in-out duration-300"
-            href="#"
+            href="https://x.com/SunnyKumar22060"
           >
             <BsTwitter />
           </a>
           <a
             className="hover:text-yellow-500 transition-all ease-in-out duration-300"
-            href="#"
+            href="https://www.linkedin.com/in/sunny-kumar-a2b757223/"
           >
             <BsLinkedin />
           </a>

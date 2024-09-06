@@ -80,8 +80,6 @@ export const cancelCourseBundle=createAsyncThunk("/payments/cancel",async()=>{
 });
 
 
-
-
 const razorpaySlice=createSlice({
     name: "razorpay",
     initialState,
@@ -111,9 +109,6 @@ const razorpaySlice=createSlice({
                state.finalMonths=action?.payload?.finalMonths;
                state.monthlySalesRecord=action?.payload?.monthlySalesRecord
             })
-
-
-
     }
 });
 export default razorpaySlice.reducer;
