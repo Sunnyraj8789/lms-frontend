@@ -19,7 +19,6 @@ import EditProfile from './Pages/User/EditProfile';
 import Profile from './Pages/User/Profile';
 
 
-
 function App() {
 
   return (
@@ -49,7 +48,7 @@ function App() {
               <Route path='/checkout' element={<Checkout/>}/>
               <Route path='/checkout/success' element={<CheckoutSuccess/>}/>
               <Route path='/checkout/fail' element={<CheckoutFailure/>}/>
-              <Route path='/course/displaylecture' element={<Displaylectures/>}/>
+              <Route path='/course/displaylectures' element={<Displaylectures/>}/>
               
 
          </Route>
