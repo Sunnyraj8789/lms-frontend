@@ -83,7 +83,7 @@ const lectureSlice=createSlice({
 
         })
 
-        .addCase(getCourseLectures.fulfilled,(state,action)=>{
+        .addCase(addCourseLecture.fulfilled,(state,action)=>{
             state.lectures=action?.payload?.course?.lectures;
             
         })
