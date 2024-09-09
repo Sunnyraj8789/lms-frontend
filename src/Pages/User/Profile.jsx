@@ -36,7 +36,7 @@ function Profile(){
                         <p>Email: </p><p>{userData?.email}</p>
                         <p>Role: </p><p>{userData?.role}</p>
                         <p>Subscription: </p>
-                        <p>{userData?.subscription?.status=== "active" ? "Action":"Inactive"}</p>
+                        <p>{userData?.subscription?.status=== "active" ? "Active":"Inactive"}</p>
 
 
 

@@ -14,7 +14,7 @@ const initialState ={
 
 export const getRazorPayId=createAsyncThunk("/razorpay/getId",async()=>{
     try {
-        const response=await axiosInstance.get("/payments/razorpay_key");
+        const response=await axiosInstance.get("/payments/razorpay-key");
         return response.data;
     } catch (error) {
         toast.error("Failed to load data"); 
@@ -107,7 +107,7 @@ const razorpaySlice=createSlice({
             .addCase(getPaymentRecord.fulfilled,(state,action)=>{
                state.allPayments=action?.payload?.allPayments;
                state.finalMonths=action?.payload?.finalMonths;
-               state.monthlySalesRecord=action?.payload?.monthlySalesRecord
+               state.monthlySalesRecord=action?.payload?.monthlySalesRecord;
             })
     }
 });

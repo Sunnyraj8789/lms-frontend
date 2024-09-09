@@ -31,7 +31,7 @@ function Checkout(){
             name: "Coursify Pvt. Ltd.",
             description:"Subscription",
             theme:{
-                color: '#F37254'
+                color: '#0000FF'
             },
 
             handler: async function (response){
