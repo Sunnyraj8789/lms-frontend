@@ -1,8 +1,9 @@
 import apj from "../Assets/Images/apj.png";
-import billGates from "../Assets/Images/billGates.png";
 import einstein from "../Assets/Images/einstein.png";
+import mahatma from "../Assets/Images/mahatma.png";
 import nelsonMandela from "../Assets/Images/nelsonMandela.png";
 import steveJobs from "../Assets/Images/steveJobs.png";
+
 
 export const celebrities=[
     {
@@ -30,9 +31,10 @@ export const celebrities=[
         slideNumber:4
     },
     {
-        title:"Bill Gates",
-        description:"''Patience is a key element of success.''",
-        image:billGates,
+        title:"Mahatma Gandhi",
+        description:"“The future depends on what we do in the present.”",
+        image:mahatma,
         slideNumber:5
     },
+    
 ]

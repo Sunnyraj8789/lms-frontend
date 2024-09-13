@@ -8,22 +8,26 @@ const initialState ={
     lectures:[]
 }
 
-export const getCourseLectures=createAsyncThunk("/course/lecture/get",async(cid)=>{
-    try {
-        const response=axiosInstance.get(`/courses/${cid}`);
-        toast.promise(response,{
-            loading:"Fetching courses lectures",
-            success:"lectures fetching successfully",
-            error: "Failed to load the courses"
+export const getCourseLectures = createAsyncThunk(
+    "/course/lecture/get",
+    async (courseId) => {
+      try {
+        const res = axiosInstance.get(`/courses/${courseId}`);
+  
+        toast.promise(res, {
+          loading: "Fetching the lectures...",
+          success: "Lectures fetched successfully",
+          error: "Failed to fetch lectures",
         });
-        return (await response).data;
-        
-    } catch (error) {
-        toast.error(error?.response?.data?.message)
-        
+  
+        const response = await res;
+        return response.data;
+      } catch (error) {
+        toast.error(error?.response?.data?.message);
+      }
     }
-
-});
+  );
+  
 
 
 export const addCourseLecture=createAsyncThunk("/course/lecture/add",async(data)=>{
@@ -54,8 +58,6 @@ export const addCourseLecture=createAsyncThunk("/course/lecture/add",async(data)
 
 export const deleteCourseLecture=createAsyncThunk("/course/lecture/delete",async(data)=>{
     try {
-       
-
         const response=axiosInstance.delete(`/courses?courseId=${data.courseId}&lectureId=${data.lectureId}`);
         toast.promise(response,{
             loading:"deleting course lecture",

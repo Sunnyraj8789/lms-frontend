@@ -36,7 +36,7 @@ function Profile(){
                         <p>Email: </p><p>{userData?.email}</p>
                         <p>Role: </p><p>{userData?.role}</p>
                         <p>Subscription: </p>
-                        <p>{userData?.subscription?.status=== "active" ? "Active":"Inactive"}</p>
+                        <p>{userData?.subscription?.status=== "active" ? "active":"Inactive"}</p>
 
 
 
@@ -51,27 +51,15 @@ function Profile(){
                             to="/user/editprofile" className="w-48 bg-yellow-600 hover:bg-yellow-500 transition-all ease-in-out duration-300 rounded-sm font-semibold py-2 cursor-pointer text-center">
                                 <button>Edit Profile</button>
                         </Link>
-
-
                       </div>
                         {userData?.subscription?.status === "active" &&(
                             <button onClick={handleCancellation} className="w-full bg-red-600 hover:bg-red-500 transition-all ease-in-out duration-300 rounded-sm font-semibold py-2 cursor-pointer text-center">
                                 Cancel Subscription
                             </button>
                         )}
-
-
                 </div>
-
             </div>
-
-            
         </HomeLayout>
-
-
-
     );
-
 }
-
 export default Profile;
