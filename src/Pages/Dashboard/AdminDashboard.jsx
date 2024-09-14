@@ -190,7 +190,7 @@ function AdminDashboard(){
                                             <td>
                                                 {course?.numberOfLectures}
                                             </td>
-                                            <td className="max-w-28 overflow-hidden text-ellipsis whitespace-nowrap">
+                                            <td className="w-28 overflow-hidden text-ellipsis whitespace-nowrap">
                                                 <textarea 
                                                     value={course?.description}
                                                     readOnly
