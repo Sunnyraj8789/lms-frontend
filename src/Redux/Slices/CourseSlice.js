@@ -12,7 +12,6 @@ const initialState = {
 export const getAllCourses = createAsyncThunk("/course/get", async () => {
   try {
     const response = axiosInstance.get("/courses");
-
     toast.promise(response, {
       loading: "Loading courses data...",
       success: "Courses loaded successfully",
@@ -27,7 +26,7 @@ export const getAllCourses = createAsyncThunk("/course/get", async () => {
 
 // function to create a new course
 export const createNewCourse = createAsyncThunk(
-  "/get/courses",
+  "/course/create",
   async (data) => {
     try {
       // creating the form data from user data
@@ -38,16 +37,14 @@ export const createNewCourse = createAsyncThunk(
       formData.append("createdBy", data?.createdBy);
       formData.append("thumbnail", data?.thumbnail);
 
-      const res = axiosInstance.post("/courses", formData);
+      const response = axiosInstance.post("/courses", formData);
 
-      toast.promise(res, {
+      toast.promise(response, {
         loading: "Creating the course...",
         success: "Course created successfully",
         error: "Failed to create course",
       });
-
-      const response = await res;
-      return response.data;
+      return (await response).data;
     } catch (error) {
       toast.error(error?.response?.data?.message);
     }
@@ -57,17 +54,14 @@ export const createNewCourse = createAsyncThunk(
 // function to delete the course
 export const deleteCourse = createAsyncThunk("/course/delete", async (id) => {
   try {
-    const res = axiosInstance.delete(`courses/${id}`);
-
-    toast.promise(res, {
+    const response = axiosInstance.delete(`courses/${id}`);
+    toast.promise(response, {
       loading: "Deleting the course...",
       success: "Courses deleted successfully",
       error: "Failed to delete course",
     });
 
-    const response = await res;
-
-    return response.data;
+    return (await response).data;
   } catch (error) {
     toast.error(error?.response?.data?.message);
   }
