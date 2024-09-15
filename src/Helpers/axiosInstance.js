@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL="https://lms-server-stww.onrender.com/api/v1";
+const BASE_URL="https://lms-server-stww.onrender.com";
 
 const axiosInstance=axios.create();
 
